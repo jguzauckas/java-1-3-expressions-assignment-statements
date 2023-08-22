@@ -183,25 +183,96 @@ double decimalNumberVariable = 5.2 / 3.4;
 
 ---
 
-## Final Notes
+## Compound Statements and Order of Operations
 
-Taking our very first example from `NotesInt1.java`, the whole file looks like this:
+Just like in our math classes, the computer follows an order of operations when doing math (and many other things). Just like in math where we have operations that share the same priority and are just covered from left to right, our computers do the same thing. When a computer prioritizes its operations, we refer to it as **operator precedence**. Here is the operator precedence for the Java programming language:
+
+1. Grouping (in the form of parentheses `()`)
+2. Multiplication (`*`), Division (`/`), Remainder (`%`)
+3. Addition (`+`), Subtraction (`-`)
+4. Assignment (`=`)
+
+Just like our traditional order of operations, we have operations that share the same priority (like 2 and 3), and when they are both present they are done left-to-right (that is, the operation most to the left is done first and the operation most to the right is done last).
+
+A **compound expression** is one that uses multiple operations. You may notice that our variable assignment from `NotesArithmetic2.java` would technically be a compound expression, as the equals sign (`=`) counts as one of our operations. We can put together much larger compound expressions that use many operations. Let's look at this example from `NotesArithmetic3.java`:
 
 ```java
-public class NotesInt1{
+int wholeNumberVariable = 3 + 4 * 2 / (4 - 5) - 4 % 3;
+System.out.println(wholeNumberVariable);
+```
+
+To build a mutual understanding of our operator precedence, here is how Java would work through this example:
+
+```java
+int wholeNumberVariable = 3 + 4 * 2 / (4 - 5) - 4 % 3       // Original
+int wholeNumberVariable = 3 + 4 * 2 / (-1) - 4 % 3          // Do what's in parentheses/grouping first (4 - 5) = (-1)
+int wholeNumberVariable = 3 + 8 / (-1) - 4 % 3              // Multiplication came first from left to right 4 * 2 = 8
+int wholeNumberVariable = 3 + (-8) - 4 % 3                  // Division comes next from left to right 8 / (-1) = (-8)
+int wholeNumberVariable = 3 + (-8) - 1                      // Remainder comes next from left to right 4 % 3 = 1
+                                                            // (4 divided by 3 leaves a remainder of 1)
+int wholeNumberVariable = (-5) - 1                          // Addition came first from left to right 3 + (-8) = (-5)
+int wholeNumberVariable = (-6)                              // Subtraction is our last operation (-5) - 1 = (-6)
+int wholeNumberVariable = (-6)                              // Now we use the assignment operation = to save our
+                                                            // number -6 to the variable
+```
+
+We can test if we did this correctly by running the `NotesArithmetic3.java` file and checking what value it prints out:
+
+```
+-6
+```
+
+Throughout the year we will be adding our future operations to this operator precedence list to keep an accurate priority list.
+
+---
+
+## Arithmetic Problems
+
+Just like math, either by hand or by a calculator, we can run into issues sometimes. One classic example plays a role in our Java programming as well: division by zero. We learn in math classes that we can't divide by 0, and calculators will produce some sort of error when we do it. Java is no different and produces an **ArithmeticException**. Let's look at this sample from `NotesArithmetic4.java`:
+
+```java
+int wholeNumberVariable = 5 / 0;
+```
+
+Note that when just writing the code out, Java doesn't notice this being an issue. This is because this is known as a **RuntimeException**, meaning it is brought out when a program is run. When we run this program, this is what is produced:
+
+```
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at NotesArithmetic4.main(NotesArithmetic4.java:3)
+```
+
+We will be discussing more exceptions and errors throughout the year, and they might yield similar results like this when run. This note contains a lot of useful information:
+
+- `java.lang.ArithmeticException: / by zero` - This is an `ArithmeticException`, with the cause being division by 0
+- `at NotesArithmetic4.main(NotesArithmetic4.java:3)` - This happens in the `main` method in the `NotesArithmetic4.java` file at line 3.
+
+Please use these messages to help find your problem when you get them!
+
+---
+
+## Final Notes
+
+Taking our very first example from `NotesLiteral1.java`, the whole file looks like this:
+
+```java
+public class NotesLiteral1 {
     public static void main (String[] args){
         int wholeNumberVariable = 10;
-    }
+        double decimalNumberVariable = -3.957;
+        boolean booleanVariable = true;
+    }  
 }
 ```
 
-We only honed in on the middle line with our variable initially, but every piece of this file is important to the program running and doing what we want. Taking a look at our second example from `NotesDouble1.java`, that whole file looks like this:
+We only honed in on the middle line with our variables initially, but every piece of this file is important to the program running and doing what we want. Taking a look at our second example from `NotesDeclaration1.java`, that whole file looks like this:
 
 ```java
-public class NotesDouble1{
+public class NotesDeclaration1 {
     public static void main (String[] args){
-        double decimalNumberVariable = -3.957;
-    }
+        int wholeNumberVariable;
+        double decimalNumberVariable;
+        boolean booleanVariable;
+    }  
 }
 ```
 

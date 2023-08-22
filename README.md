@@ -8,7 +8,11 @@ Due to the nature of Java, certain elements of a Java program are going to be ta
 
 This section covers the following material:
 
--
+- Literal Values
+- Variable Declaration, Initialization, and Assignment
+- Arithmetic Operations and Expressions
+- Operator Precedence
+- Arithmetic Problems
 
 To use this repository, start with the `notes.md` document, referencing the various `.java` documents as you go to see the examples in action.
 
