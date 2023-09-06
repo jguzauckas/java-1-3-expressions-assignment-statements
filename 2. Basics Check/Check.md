@@ -1,15 +1,28 @@
 # Basics Check
 
-In the `Check.java` file, accomplish the following:
+Similar to the Initial try, using the starting sample code in the `Check.java` file, try to finish the declarations, initializations, assignments, and operations.
 
-- Declare a decimal variable called variable1.
-- Initialize a whole number variable called variable2 with a value of 10.
-- Declare a boolean variable called variable3.
-- Assign the value true to variable3.
-- Assign the value 9.876 to variable1.
-- Create an order of operations problem that results in an integer answer. Print it out.
-- Create an order of operations problem that results in a decimal answer. Print it out.
-- Create an order of operations problem that results in an ArithmeticException without actually writing `/ 0`. Try to print it out.
+---
+
+Line 3 - finish declaring variable1 as a boolean.
+
+Line 4 - finish declaring variable2 as a decimal.
+
+Line 5 - finish initializing variable3 as a whole number that is 1234567.
+
+Line 6 - finish initializing variable4 as a boolean that is false.
+
+Line 7 - finish assigning variable1 the value true.
+
+Line 8 - finish assigning variable2 the value 5.4321.
+
+---
+
+Line 10 - Fill in the print statement with the value that should be printed by the operations in Line 9.
+
+Line 12 - Fill in the print statement with the value that should be printed by the operations in Line 11.
+
+---
 
 Your goal is the eliminate the errors (highlighted in red) and instead ensure there is only warnings (highlighted in yellow), as that means there are no data type issues, just issues with the variables not being used further.
 

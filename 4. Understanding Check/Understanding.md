@@ -1,9 +1,22 @@
 # Understanding Check
 
-In the `Understanding.java` file, lines 3 through 5 are asking you to do something similar to the initial try from the homework. Try to match a data type to the partial variable declarations. Each variable is being assigned a value, but doesn't have it's data type written at the beginning of the line like it's supposed to, can you fill in the correct type?
+This activity is called the "Four Fours". It's a math activity around being familiar with the order of operations and its capabilities. The goal is that you have four of the number 4, and you can use any collection of operations to try and produce different whole number outputs. Often the goal is phrased as getting every number from 1 to 20 as an output.
 
-For lines 6 through 8, the variables have a type, but are missing an assigned value on the other side. Can you write in values that meet the requirements of the data type for each line? Try to make them unique from the values in the variables from lines 3 through 5. Also, make all of these variable so that they won't be able to be edited later.
+Here is an example of getting 1 as an output:
 
-Your goal is the eliminate the errors (highlighted in red) and instead ensure there is only warnings (highlighted in yellow), as that means there are no data type issues, just issues with the variables not being used further.
+```
+(4 + 4) / (4 + 4)
+8 / 8
+1
+```
+
+The example above meets the requirements because it uses all four 4's (no more, no less). Your goal is come up with as many of these as possible to get as many numbers between 1 and 20 that you can. For each one you come up with, I want you to create a variable to hold onto the answer to the problem and then print it out. Here is the code sample from `Understanding.java` as an example of what I expect:
+
+```java
+int variable1 = (4 + 4) / (4 + 4);
+System.out.println(variable1);
+```
+
+How many can you come up with?
 
 Once you have gotten to just warnings, save the Java file and commit and push your changes via GitHub Desktop.
