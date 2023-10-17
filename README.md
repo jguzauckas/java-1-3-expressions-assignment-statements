@@ -1,4 +1,4 @@
-# AP Computer Science A - Chapter 1 Section 3
+# AP Computer Science A - Unit 1 Section 3
 
 # Expressions and Assignment Statements
 
